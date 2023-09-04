@@ -8,6 +8,16 @@ namespace Oefening2
 {
     internal class SettingsManager
     {
+        private static SettingsManager instance;
+
+        private SettingsManager() { }
+
+        public static SettingsManager Instance()
+        {
+            if (instance == null) instance = new SettingsManager();
+            return instance;
+        }
+
         private Dictionary<string, string> _settings = new Dictionary<string,string>();
 
         public void SaveSetting(string key, string value)

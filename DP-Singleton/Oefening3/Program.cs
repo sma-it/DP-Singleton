@@ -13,3 +13,8 @@ accountJarno.Withdraw(45);
 accountEls.Withdraw(23);
 
 // TODO: toon alle log messages
+
+foreach(var line in Logger.Instance().GetLogMessages())
+{
+    Console.WriteLine(line);
+}
